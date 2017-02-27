@@ -57,7 +57,7 @@ public class Main {
 			long endTime = System.currentTimeMillis();
 			long elapsed = endTime - startTime;
 
-			System.out.println("c: " + c + " time: " + elapsed);
+//			System.out.println("c: " + c + " time: " + elapsed);
 			c++;
 		}
 	}
@@ -65,7 +65,7 @@ public class Main {
 	// d=(sqrt(2)-1)/(sqrt(1+c))
 	public boolean dMin(long w1, long w2, long w3, long c) {
 		long q = w1 * w1 + c * w2 * w2 - w3 * w3;
-		long d = (int) ((Math.sqrt(2.0) - 1) / Math.sqrt(1.0 + c));
+		long d = (long) ((Math.sqrt(2.0) - 1) / Math.sqrt(1.0 + c));
 
 		if (d == 0)
 			return false;
@@ -91,6 +91,6 @@ public class Main {
 	}
 
 	public static void main(String args[]) {
-		new Main(1, 10000);
+		new Main(1, 25000);
 	}
 }
